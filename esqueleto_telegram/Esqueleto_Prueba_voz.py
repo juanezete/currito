@@ -19,6 +19,9 @@ server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # Asocia el socket con la dirección y el puerto
 server_socket.bind((host, port))
 
+# Escucha conexiones entrantes (máximo de 1 conexión en cola)
+server_socket.listen(1)
+
 # Configura el puerto serial
 ser = serial.Serial('/dev/ttyUSB0', 9600, timeout=1)
 timeout=1
@@ -141,9 +144,6 @@ while True:
     elif comando=="voz":
         while (comando == "voz"):
             print("Modo voz")
-            
-            # Escucha conexiones entrantes (máximo de 1 conexión en cola)
-            server_socket.listen(1)
 
             print(f"Esperando conexión en {host}:{port}")
 
@@ -153,7 +153,12 @@ while True:
 
             # Recibe datos del cliente
             data = client_socket.recv(1024)
+            data_type = type(data)
+            print(f"Tipo de dato recibido: {data_type}")
             print(f"Dato recibido: {data.decode()}")
+            data_conv = (data.decode('utf-8'))
+            print(data_conv)
+            ser.write(str(data_conv).encode())
             
     elif comando=="camara":
         print("Modo camara")
