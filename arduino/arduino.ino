@@ -31,7 +31,7 @@ void loop() {
       byte datos[sizeof(int) * 3];
     Serial.readBytes(datos, sizeof(int) * 3);
 
-    // Desempacar los datos
+    // Desagrupar los datos
     int dato1, dato2, dato3;
     memcpy(&dato1, &datos[0], sizeof(int));
     memcpy(&dato2, &datos[sizeof(int)], sizeof(int));
