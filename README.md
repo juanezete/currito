@@ -8,5 +8,5 @@ The main code is defined in main.py, while the remaining folders host the code f
 ## Authors
 
 - [@pilaarfdeez](https://github.com/pilaarfdeez)
+- [@luciacotoelena](https://github.com/luciacotoelena)
 - [@juanezete](https://github.com/juanezete)
-- [@pilaarfdeez](https://github.com/pilaarfdeez)
