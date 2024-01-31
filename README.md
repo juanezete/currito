@@ -5,3 +5,8 @@ This repository documents the progress of Currito , a multimodal mobile robot ðŸ
 
 The main code is defined in main.py, while the remaining folders host the code for each separate part.
 
+## Authors
+
+- [@pilaarfdeez](https://github.com/pilaarfdeez)
+- [@juanezete](https://github.com/juanezete)
+- [@pilaarfdeez](https://github.com/pilaarfdeez)
